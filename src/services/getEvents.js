@@ -17,10 +17,10 @@ const fromApiResponseToEvents = (apiResponse) => {
 };
 
 export function getEvents() {
-  // const apiURL = "https://admin.visitariocuarto.gob.ar/api/v1/events";
+  const apiURL = "https://admin.visitariocuarto.gob.ar/api/v1/events";
   // const apiURL = "http://172.17.101.212/visita/public/api/v1/events";
-  const apiURL =
-    "http://172.17.101.212/visita/public/api/v1/events?overpast=true";
+  // const apiURL =
+  //   "http://172.17.101.212/visita/public/api/v1/events?overpast=true";
   return fetch(apiURL)
     .then((res) => res.json())
     .then(fromApiResponseToEvents)

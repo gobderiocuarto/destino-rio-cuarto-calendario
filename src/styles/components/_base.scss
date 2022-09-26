@@ -1,16 +1,41 @@
-// html {
-//   position: relative;
-//   // min-height: 100vh;
-// }
-// body {
-//   // background-color: blue;
-//   padding: 16px 0;
-//   margin: 0;
-// }
+:root {
+  --fc-small-font-size: 0.85em;
+  --fc-page-bg-color: #fff;
+  --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
+  --fc-neutral-text-color: #808080;
+  --fc-border-color: #ddd;
 
-// .fc .fc-header-toolbar .fc-button-group .fc-button-primary {
-//   background-color: red;
-// }
+  --fc-button-text-color: #fff;
+  --fc-button-bg-color: #2c3e50;
+  --fc-button-border-color: #2c3e50;
+  --fc-button-hover-bg-color: #1e2b37;
+  --fc-button-hover-border-color: #1a252f;
+  --fc-button-active-bg-color: #1a252f;
+  --fc-button-active-border-color: #151e27;
+
+  --fc-event-bg-color: #003fa2;
+  --fc-event-border-color: #003fa2;
+  --fc-event-text-color: #fff;
+  --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25);
+
+  --fc-more-link-bg-color: #d0d0d0;
+  --fc-more-link-text-color: inherit;
+
+  --fc-event-resizer-thickness: 8px;
+  --fc-event-resizer-dot-total-width: 8px;
+  --fc-event-resizer-dot-border-width: 1px;
+
+  --fc-non-business-color: rgba(215, 215, 215, 0.3);
+  --fc-bg-event-color: rgb(143, 223, 130);
+  --fc-bg-event-opacity: 0.3;
+  --fc-highlight-color: rgba(188, 232, 241, 0.3);
+  --fc-today-bg-color: rgba(255, 220, 40, 0.15);
+  --fc-now-indicator-color: red;
+
+  --fc-daygrid-event-dot-width: 5px;
+
+  font-family: "Helvetica", "Arial", sans-serif;
+}
 
 html,
 body {
@@ -19,7 +44,24 @@ body {
   font-size: 14px;
 }
 body {
-  padding: 16px 0;
+  // padding: 16px 0;
+  margin-bottom: 30px;
+}
+
+nav {
+  margin-bottom: 30px;
+  &.navbar {
+    padding: 15px 0;
+    .navbar-brand {
+      img {
+        height: 50px;
+      }
+    }
+  }
+}
+
+main {
+  // padding: 20px;
 }
 
 #calendar-container {
@@ -31,5 +73,24 @@ body {
 }
 
 .fc-day-today {
-  background-color: rgba($success, 0.1) !important;
+  background-color: rgba($secondary, 0.2) !important;
+}
+
+.spinner {
+}
+
+.fc-header-toolbar {
+  .fc-toolbar-title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $secondary;
+  }
+}
+
+a {
+  color: #111;
+  &:hover {
+    color: #000;
+  }
 }
